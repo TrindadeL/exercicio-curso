@@ -1,0 +1,24 @@
+VAR
+   nomes: VETOR[1..3] DE CARACTER
+   qtdNomes: INTEIRO
+INICIO
+      qtdNomes <- 1
+ 
+      // Solicita 3 nomes ao usuário e se não vazio, os coloca no vetor
+      ENQUANTO (qtdNomes <= 3) FAÇA
+               ESCREVA("Digite o ", qtdNomes, "º nome: ")
+               LEIA(nomes[qtdNomes])
+ 
+               SE nomes[qtdNomes] = "" ENTÃO
+                       ESCREVAL("Digite um nome válido.")
+               SENAO
+                    qtdNomes <- qtdNomes + 1
+               FIMSE
+      FIMENQUANTO
+ 
+      ESCREVAL("")
+      ESCREVAL("===== Nomes Digitados =====")
+      ESCREVAL("Nome 1: ", nomes[1])
+      ESCREVAL("Nome 2: ", nomes[2])
+      ESCREVAL("Nome 3: ", nomes[3])
+FIMALGORITMO
